@@ -23,7 +23,7 @@ Gaaaaanz einfache Python Hilfe von Jemandem, der auch keine Ahnung hat.
 ### np.reshape
 
 np.reshape (#rows, #cols) hilft, eine Matrix umzuformen.
-Wir gehen davon aus, dass eine Matrix aus Reihen und Kolonnen besteht.
+Wir gehen davon aus, dass eine Matrix aus Reihen und Kolonnen besteht. Z.B. 3 Reihen, 2 Kolonnen:
 
 ````python
 A = array([[0, 1],
@@ -63,7 +63,9 @@ array([[ 1.,  1.,  1.],
 ````
 
 ### np.mean
-Fast zu kompliziert für mich. Man berechnet den Durchschnitt einer Matrix. 
+Fast zu kompliziert für mich. 
+
+Man berechnet den Durchschnitt einer Matrix. 
 
 * Ohne Achse einfach Durchschnitt aller Werte
 * Achse 0 = Durchschnitt der Kolonnen
@@ -81,7 +83,9 @@ array([ 1.5,  3.5])
 
 ### np.argmin
 
-Gibt den Index (0-bound) des kleinsten Wertes eines Arrays oder einer Matrix an. Das ganze Achsen-Gedöns von oben gilt auch hier.
+Ogottogott. 
+
+Gibt den Index (0-based) des kleinsten Wertes eines Arrays oder einer Matrix an. Das ganze Achsen-Gedöns von oben gilt auch hier.
 
 ````python
 >>> a = array([[0, 1, 2],
@@ -94,3 +98,5 @@ array([0, 0, 0])
 >>> np.argmin(a, axis=1)
 array([0, 0])
 ````
+
+Die Ästhetik eines 0-based Indexes hat mir auch noch niemand erklären können. Das erste Kind ist ja nicht das nullte Kind. "Es ist das erste Kind, aber es hat Index 0"... Oder wie?
