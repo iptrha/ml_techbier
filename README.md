@@ -1,12 +1,96 @@
 # Machine Learning Tutorial
 
-## Installation (Mac & Linux)
+## Disclaimer
+Das ist alles nur geklaut von [Pieter Buteneers (@pieterbuteneers) und Bart De Vylder von CoScale
+](https://github.com/pbutenee/ml-tutorial)
+
+## Installation
 
 
+4. Download & Install [Anaconda mit Python 2.7](https://www.continuum.io/downloads) 
 3. Git auschecken:
 	* ````git clone https://github.com/iptrha/ml_techbier.git ```` oder 
 	* [Zip-Datei](https://github.com/iptrha/ml_techbier/archive/master.zip) runterladen
 2. In Techbier Ordner wechseln: ````cd ml_techbier````
-4. Download & Install [Anaconda](https://www.continuum.io/downloads) (alle Defaults. Nehmt Python 2)
+
 5. iPython ausführen: ````ipython notebook machine_learning_aufgaben.ipynb````
 6. Browser sollte starten...
+
+
+## Python help
+Gaaaaanz einfache Python Hilfe von Jemandem, der auch keine Ahnung hat.
+
+### np.reshape
+
+np.reshape (#rows, #cols) hilft, eine Matrix umzuformen.
+Wir gehen davon aus, dass eine Matrix aus Reihen und Kolonnen besteht.
+
+````python
+A = array([[0, 1],
+       [2, 3],
+       [4, 5]])
+````
+Mit np.reshape können wir das Array umformen. Z.B. so dass es 3 Kolonnen sind statt 2
+
+````python
+B = A.reshape (2, 3)
+
+array([[0, 1, 2],
+       [3, 4, 5]])
+````
+
+Wenn man eine Dimension nicht weiss oder angeben möchte, kann man den Wert ````-1```` einsetzen
+
+````python
+C = B.reshape (-1, 6)
+
+array([[0, 1, 2, 3, 4, 5]])
+````
+
+
+### np.ones
+
+Dieser einfache Befehl erstellt einfach eine Matrix in den gewünschten Dimensionen, die aus 1en besteht.
+
+````python
+D = np.ones ((5, 3))
+
+array([[ 1.,  1.,  1.],
+       [ 1.,  1.,  1.],
+       [ 1.,  1.,  1.],
+       [ 1.,  1.,  1.],
+       [ 1.,  1.,  1.]])
+````
+
+### np.mean
+Fast zu kompliziert für mich. Man berechnet den Durchschnitt einer Matrix. 
+
+* Ohne Achse einfach Durchschnitt aller Werte
+* Achse 0 = Durchschnitt der Kolonnen
+* Achse 1 = Durchschnitt der Reihen
+
+````python
+>>> a = np.array([[1, 2], [3, 4]])
+>>> np.mean(a)
+2.5
+>>> np.mean(a, axis=0)
+array([ 2.,  3.])
+>>> np.mean(a, axis=1)
+array([ 1.5,  3.5])
+````
+
+### np.argmin
+
+Gibt den Index (0-bound) des kleinsten Wertes eines Arrays oder einer Matrix an. Das ganze Achsen-Gedöns von oben gilt auch hier.
+
+````python
+>>> a = array([[0, 1, 2],
+       		[3, 4, 5]])
+       
+>>> np.argmin(a)
+0
+>>> np.argmin(a, axis=0)
+array([0, 0, 0])
+>>> np.argmin(a, axis=1)
+array([0, 0])
+````
