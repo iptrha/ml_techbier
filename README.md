@@ -7,15 +7,33 @@ Das ist alles nur geklaut von [Pieter Buteneers (@pieterbuteneers) und Bart De V
 ## Installation
 
 
-4. Download & Install [Anaconda mit Python 2.7](https://www.continuum.io/downloads) 
-3. Git auschecken:
+1. Download & Install [Anaconda mit Python 2.7](https://www.continuum.io/downloads) 
+2. Git auschecken:
 	* ````git clone https://github.com/iptrha/ml_techbier.git ```` oder 
 	* [Zip-Datei](https://github.com/iptrha/ml_techbier/archive/master.zip) runterladen
-2. In Techbier Ordner wechseln: ````cd ml_techbier````
+3. In Techbier Ordner wechseln: ````cd ml_techbier````
 
-5. iPython ausführen: ````ipython notebook machine_learning_aufgaben.ipynb````
-6. Browser sollte starten...
+4. iPython ausführen: ````ipython notebook machine_learning_aufgaben.ipynb````
+5. Browser sollte starten...
 
+## Verwendung
+Nachdem das Browserfenster gestartet ist, kann man den Workshop durcharbeiten. Auf die Python-Codezeilen kann man einfach mit der Maus draufklicken und dann Shift-Enter drücken. Dann wird der Python Code ausgeführt.
+
+Die Teile des Codes die folgenden Code beinhalten müssen implementiert werden und die Exception auskommentiert werden:
+
+````python
+##### Implement this part of the code #####
+raise NotImplementedError()
+# plt.scatter( ? , ? )
+````
+
+zu:
+
+````python
+##### Implement this part of the code #####
+# raise NotImplementedError()
+plt.scatter( total_page_views , cpu_usage )
+````
 
 ## Python help
 Gaaaaanz einfache Python Hilfe von Jemandem, der auch keine Ahnung hat.
